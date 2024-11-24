@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku Solver with Visualization</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Sudoku Solver</h1>
+    </div>
+
+    <div class="sudoku_grid">
+        <!-- Dynamically generate the 9x9 grid with IDs 0 to 80 -->
+        <script>
+            for (let i = 0; i < 81; i++) {
+                document.write(`<div id="${i}" class="box"></div>`);
+            }
+        </script>
+    </div>
+
+    <div class="buttons">
+        <button id="GetPuzzle">Get Puzzle</button>
+        <button id="SolvePuzzle">Solve Puzzle</button>
+        <button id="VisualizePuzzle">Visualize Backtracking</button>
+    </div>
+
+    <div class="Controls">
+        <label for="speed">Visualization Speed:</label>
+        <input type="range" id="speed" min="50" max="1000" step="50" value="100">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
